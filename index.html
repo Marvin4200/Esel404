@@ -8,10 +8,22 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+      --bg:           #080810;
+      --surface:      rgba(255,255,255,0.04);
+      --surface2:     rgba(255,255,255,0.07);
+      --border:       rgba(255,255,255,0.08);
+      --text:         #e2e8f0;
+      --muted:        #64748b;
+      --accent:       #818cf8;
+      --accent2:      #667eea;
+      --pink:         #f093fb;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
-      background: #080810;
-      color: #e2e8f0;
+      background: var(--bg);
+      color: var(--text);
       min-height: 100vh;
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
@@ -56,7 +68,7 @@
     }
 
     p {
-      font-size: 0.92rem; color: #4a5568; line-height: 1.7; margin-bottom: 2rem;
+      font-size: 0.92rem; color: var(--muted); line-height: 1.7; margin-bottom: 2rem;
     }
 
     .links {
@@ -73,15 +85,15 @@
       color: white;
     }
     .btn-secondary {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: #888;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--muted);
     }
     .btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
 
     .footer {
       position: fixed; bottom: 1.5rem; left: 0; right: 0;
-      text-align: center; font-size: 0.78rem; color: #2a2a35;
+      text-align: center; font-size: 0.78rem; color: rgba(255,255,255,0.12);
     }
   </style>
 </head>
